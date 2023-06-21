@@ -9,10 +9,10 @@ on:
       - main
 
 env:
-  IMAGE_FILE: dockerimg.tar
+  IMAGE_FILE: dockerimg.tar.xz
   IMAGE: picolibc
-  PACKAGES_FILE: picolibc/.github/packages.txt
-  EXTRA_FILE: picolibc/.github/extra-files.txt
+  PACKAGES_FILE: picolibc/.github/linux-packages.txt
+  EXTRA_FILE: picolibc/.github/linux-files.txt
 
 jobs:
   cache-maker:
