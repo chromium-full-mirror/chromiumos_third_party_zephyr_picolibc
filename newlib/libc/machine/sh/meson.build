@@ -41,6 +41,9 @@ srcs_machine = [
   'strcpy.S',
   'strlen.S',
   'strncpy.S',
+  'strncpy.c',
 ]
+
+subdir('sys')
 
 src_machine = files(srcs_machine)
