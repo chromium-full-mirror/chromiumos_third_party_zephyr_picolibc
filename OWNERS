@@ -1,1 +1,6 @@
 include chromiumos/third_party/zephyr:main:/OWNERS
+
+# SIEs working on Nissa FW branch. Separate to reduce merge conflict.
+shenashley@google.com
+shouchieh@chromium.org
+yulunchen@google.com
