@@ -92,6 +92,7 @@ picolibc_headers(""
   termios.h
   threads.h
   time.h
+  uchar.h
   unctrl.h
   unistd.h
   utime.h
