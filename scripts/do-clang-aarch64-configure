@@ -35,3 +35,6 @@
 #
 exec "$(dirname "$0")"/do-configure clang-aarch64-none-elf \
 	-Dtests=true -Dmultilib-exclude=arm "$@"
+
+exec "$(dirname "$0")"/do-configure clang-aarch64-none-elf-fvp \
+	-Dtests=true -Dmultilib-exclude=arm -Dtest-machine=fvp "$@"
