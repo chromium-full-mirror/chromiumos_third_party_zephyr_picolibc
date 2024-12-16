@@ -42,12 +42,16 @@ _cstart(void)
 }
 
 extern char __stack[];
+extern void (* const __vector_table[]);
 
 void __attribute__((naked)) __section(".init") __attribute__((used))
 _start(void)
 {
     /* Set up the stack pointer */
     __asm__("mov_s sp, %0" : : "r" (__stack));
+
+    /* Set up the vector table */
+    __asm__("sr %0, [0x25]" : : "r" (__vector_table));
 
     /* Branch to C code */
     __asm__("j _cstart");
