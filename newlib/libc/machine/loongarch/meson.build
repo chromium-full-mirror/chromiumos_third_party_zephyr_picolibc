@@ -37,6 +37,8 @@ srcs_machine = [
   'setjmp.S',
 ]
 
+subdir('machine')
+
 foreach params : targets
   target = params['name']
   target_dir = params['dir']
