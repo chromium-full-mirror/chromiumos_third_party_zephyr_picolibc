@@ -35,21 +35,8 @@
 
 #include "../../crt0.h"
 
-static void __attribute__((used)) __section(".init")
+void __section(".init")
 _cstart(void)
 {
 	__start();
-}
-
-extern char __stack[];
-
-void __section(".init") __attribute__((used))
-_start(void)
-{
-	/* Initialize stack pointer */
-	__asm__("mvhi sp, hi(%0)" : : "i" (__stack));
-	__asm__("ori  sp, sp, lo(%0)" : : "i" (__stack));
-
-	/* Branch to C code */
-        __asm__("bi %0" : : "i" (_cstart));
 }
