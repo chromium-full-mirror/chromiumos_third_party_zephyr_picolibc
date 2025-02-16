@@ -41,4 +41,3 @@ target_compile_options(picocrt-semihost PRIVATE -DCRT0_EXIT -DCRT0_SEMIHOST ${PI
 
 target_include_directories(picocrt SYSTEM PUBLIC ${PICOLIBC_INCLUDE_DIRECTORIES})
 target_include_directories(picocrt-semihost SYSTEM PUBLIC ${PICOLIBC_INCLUDE_DIRECTORIES})
-
