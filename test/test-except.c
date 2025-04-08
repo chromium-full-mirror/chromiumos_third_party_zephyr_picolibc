@@ -64,6 +64,10 @@ main(void)
 
     __asm__(".word 0xffffffff");
 
+#elif defined(__x86_64__) || defined(__i386__)
+
+    __asm__("ud2");
+
 #else
 
 #define NO_INVALID
